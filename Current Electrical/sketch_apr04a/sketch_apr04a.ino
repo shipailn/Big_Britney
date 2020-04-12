@@ -8,7 +8,7 @@ void setup() {
   Serial.begin(9600);//begin using serial monitor
   pinMode(A0,OUTPUT);//PIN OUT TO OC2
   pinMode(A1,OUTPUT);//PIN OUT TO OC1
-  pinMode(A2,INPUT);//DIRECTIONAL INPUT
+  pinMode(1,INPUT);//DIRECTIONAL INPUT
   pinMode(A3,INPUT);//SPEED INPUT FROM POT1
   pinMode(A4,OUTPUT);//PINOUT TO OC3 
   pinMode(A5,OUTPUT);//PINOUT OT OC4
@@ -21,9 +21,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   
-direction = digitalRead(A2);//setting direction variable
+direction = digitalRead(1);//setting direction variable
 rawSpeed=analogRead(A3);//reading pot1 input
-brake=analogRead(A6);//reading pot2 input
+brake=analogRead(A2);//reading pot2 input
 speed=(rawSpeed/4);//converting pot1 input into and output value
 if(direction == HIGH){//setting motors to drive forward
   analogWrite(A1,speed);//controlling speed and direction of motor 1 in this pin
