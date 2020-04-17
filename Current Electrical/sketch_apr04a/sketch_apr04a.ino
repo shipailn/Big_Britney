@@ -12,7 +12,7 @@ void setup() {
   pinMode(A3,INPUT);//SPEED INPUT FROM POT1
   pinMode(A4,OUTPUT);//PINOUT TO OC3 
   pinMode(A5,OUTPUT);//PINOUT OT OC4
-  pinMode(A6,INPUT);//BRAKE INPUT FROM POT2
+  pinMode(A2,INPUT);//BRAKE INPUT FROM POT2
   
   
 
